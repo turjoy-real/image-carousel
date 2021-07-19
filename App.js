@@ -1,21 +1,25 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import Carousel from './components/Carousel';
+
+const images = [
+  'https://cdn.pixabay.com/photo/2021/06/27/20/32/lighthouse-6369963_960_720.jpg',
+  'https://cdn.pixabay.com/photo/2021/06/20/17/48/horse-6351668_960_720.jpg',
+  'https://cdn.pixabay.com/photo/2020/05/26/17/57/cottages-5224102_960_720.jpg',
+  'https://cdn.pixabay.com/photo/2021/06/06/09/04/bridge-6314795_960_720.jpg'
+]
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView>
+      <View>
+          <Carousel
+          images={images}/>       
+       </View>
+    </SafeAreaView>
+    
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
